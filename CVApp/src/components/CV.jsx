@@ -1,4 +1,4 @@
-export default function CV({ personalInfo, education }){
+export default function CV({ personalInfo, education, experience }){
     const { name, email, phoneNumber } = personalInfo
     return(
         <>
@@ -13,6 +13,16 @@ export default function CV({ personalInfo, education }){
             <div key={educate.id}>
                 <p>College name: {educate.data.name}</p>
                 <p>Degree: {educate.data.degree}</p>
+            </div>
+        ))}
+
+        {experience.map((exp) => (
+            <div key={exp.id}>
+                <p>Company name: {exp.data.company}</p>
+                <p>Position: {exp.data.position}</p>
+                <p>Responsibility: {exp.data.responsibility}</p>
+                <p>From date: {exp.data.from}</p>
+                <p>To date: {exp.data.to}</p>
             </div>
         ))}
 

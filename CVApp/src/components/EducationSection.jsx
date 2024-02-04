@@ -1,32 +1,34 @@
 import { useState } from "react"
-export default function EducationSection({education, edit, func, editing}){
+export default function EducationSection({education, func}){
     const [formInfo, setFormInfo] = useState({name: '', degree: ''})
     const [id, setId] = useState('')
-
+    const [edit, setEdit] = useState(false)
     function handle(event){
         setFormInfo((prevData) => ({
             ...prevData, [event.target.name]: event.target.value
         }))
     }
     const isEditing = (id) => {
-        editing(true);
+        setEdit(true);
         setId(id)
     }
 
     const cancelEditing = () => {
-        editing(false)
+        setEdit(false)
     }
 
     function add(id){
-        const newEducations = education.map(item => {
-            if(item.id == id){
-                return {...item, data: formInfo}
-            }
-            return item
-        })
-        
-        func(newEducations)
-        editing(false)
+        if(formInfo.name != "" && formInfo.degree != ""){
+            const newEducations = education.map(item => {
+                if(item.id == id){
+                    return {...item, data: formInfo}
+                }
+                return item
+            })
+            func(newEducations)
+        }
+      
+        setEdit(false)
         setFormInfo({name: '', degree: ''})
     }
     

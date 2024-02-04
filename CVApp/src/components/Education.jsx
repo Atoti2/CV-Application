@@ -22,11 +22,13 @@ export default function Education({data, educationFc}){
         <>
             <form className="flex flex-col ">
                 <label htmlFor="name" id="name" className="text-xl mb-2">Name: </label>
-                <input value={formInfo.name} onInput={handle} name="name" type="text" placeholder="Kandó" className="w-40 p-1 bg-slate-600 placeholder:text-slate-200/70 rounded-md"/>
+                <input value={formInfo.name} onInput={handle} name="name" type="text" placeholder="Kandó" className="inputStyle"/>
                 <label htmlFor="degree" id="degree" className="text-xl mb-2">Degree: </label>
-                <input value={formInfo.degree} onInput={handle} name="degree" type="text" placeholder="Asztalos" className="w-40 p-1 bg-slate-600 placeholder:text-slate-200/70 rounded-md" />
+                <input value={formInfo.degree} onInput={handle} name="degree" type="text" placeholder="Asztalos" className="inputStyle" />
             </form>
-            <button onClick={addToEducation}>Add</button>
+            <div className="flex justify-center">
+                <button className="font-bold flex bg-sky-600 rounded-md p-2 mt-3 w-1/2 justify-center" onClick={addToEducation}>Add</button>
+            </div>
         </>
     )
 }
