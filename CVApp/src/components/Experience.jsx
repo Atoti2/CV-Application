@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuidv4';
 
 export default function Experience({data, experienceFc}){
     const [info, setInfo] = useState({company: '', position: '', responsibility: '', from: '', to: ''})
