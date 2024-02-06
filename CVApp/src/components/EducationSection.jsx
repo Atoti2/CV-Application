@@ -1,8 +1,10 @@
 import { useState } from "react"
+
 export default function EducationSection({education, func}){
     const [formInfo, setFormInfo] = useState({name: '', degree: ''})
     const [id, setId] = useState('')
     const [edit, setEdit] = useState(false)
+
     function handle(event){
         setFormInfo((prevData) => ({
             ...prevData, [event.target.name]: event.target.value

@@ -4,6 +4,6 @@
 
 @layer components{
     .inputStyle{
-        @apply w-fit p-1 bg-slate-600 placeholder:text-slate-200/70 rounded-md text-slate-100 font-bold
+        @apply p-1 bg-slate-600 placeholder:text-slate-200/70 rounded-md text-slate-100 font-bold
     }
 }

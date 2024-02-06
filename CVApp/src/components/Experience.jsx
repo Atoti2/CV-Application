@@ -37,7 +37,7 @@ export default function Experience({data, experienceFc}){
                 <input value={info.to} onInput={handle} name="to" type="date" placeholder="2025-01-01" className="inputStyle" />
             </form>
             <div className="flex justify-center">
-                <button className="font-bold flex bg-sky-600 rounded-md p-2 mt-3 w-1/2 justify-center" onClick={addToExperience}>Add</button>
+                <button className="font-bold flex bg-sky-600 rounded-md p-2 mt-3 w-1/2 justify-center hover:scale-105 transition-all" onClick={addToExperience}>Add</button>
             </div>
         </>
     )

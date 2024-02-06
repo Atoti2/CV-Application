@@ -1,5 +1,5 @@
 export default function GeneralInfo({data, func}){
-    const { name, email, phoneNumber } = data
+    const { name, email, phoneNumber, about } = data
     return (
         <div>
             <form className="flex flex-col ">
@@ -11,6 +11,9 @@ export default function GeneralInfo({data, func}){
 
                 <label htmlFor="phone" id="phone"  className="text-xl mb-2">Phone number: {' '}</label>
                 <input value={phoneNumber} onChange={func} name="phoneNumber" type="tel" placeholder="+36938159" className="inputStyle" />
+
+                <label htmlFor="about" id="about" className="text-xl mb-2">About me: {' '}</label>
+                <textarea name="about" onChange={func} id="about" cols="30" rows="10"></textarea>
             </form>
         </div>
     )
